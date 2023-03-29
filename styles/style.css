@@ -347,12 +347,6 @@ body {
 	background: white;
 }
 
-.lb_show_date {
-  color: #3d3d3d;
-  text-align: center;
-  font-family: 'Krona One', sans-serif;
-  font-size: 1.2rem;
-}
 
 .show_date {
   background-color: var(--cor-2);
@@ -371,6 +365,13 @@ body {
 
 .show_date:hover {
   color: var(--cor-5);
+}
+
+.show_date::placeholder {
+  color: #3d3d3d;
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+  font-size: 1.2rem;
 }
 
 .display_elements {
