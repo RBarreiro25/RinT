@@ -1,0 +1,1054 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-1: #0f0f0f;
+    --cor-2: #f0f0f0;
+    --cor-3: #2254D3;
+    --cor-4: #1b43a9;
+    --cor-5: #FF6A22;
+    --cor-6: #e74b00;
+    --cor-7: #122b6b;
+    --cor-pb: #aab9cf;
+    --cor-cb: #bdd4e7;
+
+    --display: 85%;
+    --display-create: 87%;  /*Always = display + 2% */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-1);
+    color: var(--cor-2);
+}
+
+.cabecalho {
+    background-color: #191716;
+    padding: 0.0% 0% 0% 10%;
+    animation-name: slideInX;
+    animation-duration: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transform: translateX(50px);
+}
+
+.cabecalho__menu {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+}
+
+.cabecalho__menu__logo {
+    max-width:50px;
+    width: auto;
+    height: auto;
+    padding: 5.5px;
+}
+
+.cabecalho__menu__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-3);
+    text-decoration: none;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-5);
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__texto__contatos {
+  font-size: 1.56rem;
+  font-family: 'Krona One', sans-serif;
+  animation: slideInY 0.6s ease;
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+}
+
+.apresentacao__conteudo__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+}
+
+.apresentacao__links__sobre {
+  margin-top: 2%;
+  width: 40%;
+}
+
+.apresentacao__links__sobre__navegacao {
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  background-color: var(--cor-5);
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10.5px 0px;
+  color: var(--cor-2);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__conteudo__titulo {
+  font-size: 2.25rem;
+  font-family: 'Krona One', sans-serif;
+  animation-name: slideInY;
+  animation-duration: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  transform: translateY(20px);
+}
+
+.destaque-titulo {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--cor-3);
+  font-size: 2.5rem;
+  font-family: 'Krona One', sans-serif;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    animation-name: slideInY;
+    animation-duration: 1.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    transform: translateY(-20px);
+}
+
+.apresentacao__conteudo__texto_no_animation {
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: center;
+    margin-top: 9%;
+}
+
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content:center;
+    gap: 16px;
+    background-color: var(--cor-3);
+    width: 50%;
+    align-items: center;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 18.5px 0px;
+    text-decoration: none;
+    color: var(--cor-2);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__links__navegacao:hover {
+    background-color: var(--cor-5);
+}
+
+.apresentacao__links__navegacao__icone {
+    width: 10%;
+}
+
+.apresentacao__img {
+  width: 35%;
+  animation: slideInY 0.6s ease;
+  animation-fill-mode: forwards;
+  transform: translateY(20px);
+
+}
+
+.rodape{
+    color: var(--cor-1);
+    background-color: var(--cor-3);
+    padding: 14px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 8%;
+}
+
+
+.apresentacao__links__sobre__navegacao:hover {
+    background-color: var(--cor-3);
+}
+
+
+/* styles for button */
+
+#boxBack {
+  /* FULLSCREEN + CENTERED */
+  position: fixed;
+  border-radius: 6px;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 35%;
+  align-items: center;
+  justify-content: center;
+ 
+  /* TRANSPARENT BACKGROUND + HIDDEN */
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+/* ADD THIS CSS CLASS TO SHOW */
+#boxBack.show { display: flex; }
+ 
+/* DIALOG BOX */
+#boxWrap {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  padding: 10px;
+  border-radius: 6px;
+  background: var(--cor-2);
+  color: var(--cor-1);
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem
+
+}
+
+/*Styles for the Create page*/
+
+/* background image */
+.create__bd {
+    background-image: url(/assets/backgroundIcons.jpg);
+    width: auto;
+}
+
+.top_div_create {
+  width: 100%;
+  height: 17vh;
+  padding: 3px 3px 3px 2px;
+}
+
+.top_img_create {
+  background: url(/assets/top-img-create-menor-altura.svg) no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;  
+}
+
+.inputs_dweek {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  padding-bottom: 3vh;
+}
+
+/* The container */
+.lb_weeks {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+}
+
+/* Hide the browser's default radio button */
+.lb_weeks input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0px;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15%;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.lb_weeks:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a background */
+.lb_weeks input:checked ~ .checkmark {
+  background-color: var(--cor-5);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.lb_weeks input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) INACTIVE*/
+.lb_weeks .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.show_date {
+  background-color: var(--cor-2);
+  position: relative;
+  width: 16%;
+  left: 77%;
+  height: 8vh;
+  bottom: 9vh;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  cursor:pointer;
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+  filter: opacity(70%);  
+}
+
+.show_date:hover {
+  color: var(--cor-5);
+}
+
+.display_elements {
+  border-radius: 4px;
+  padding: 0% 0% 3% 0%;
+  margin: 3% 5%;
+  background-color: var(--cor-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-name: slideInY;
+  animation-duration: 0.6s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  transform: translatey(+20px);
+}
+
+.create {
+  width: var(--display-create);
+  padding: 1%;
+  background-color: var(--cor-2);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.create__button {
+  color: #3d3d3d;
+  background-color: var(--cor-cb);
+  width: 40%;
+  padding: 2%;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+  font-weight: 400;
+  cursor:pointer;
+  border-radius: 6px;
+}
+
+.create__button:hover {
+  background-color: var(--cor-5);
+}
+
+.create__button__page {
+  margin-top: 5%;
+  color: #3d3d3d;
+  background-color:var(--cor-cb);
+  width: 25%;
+  padding: 1%;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Krona One', sans-serif;
+  font-weight: 400;
+  cursor:pointer;
+  border-radius: 6px;
+}
+
+.create__button__page:hover {
+  background-color:var(--cor-5);
+}
+
+.create__tasks {
+  width: 53%;
+}
+
+.create__water {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.create__water__glasses {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--cor-cb);
+  padding: 2%;
+  border-radius: 10px;
+  margin: 2% 0%;
+}
+
+  /* Style the headers */
+.cabecalho__create {
+  background-color: var(--cor-2);
+  text-align: center;
+  border-radius: 5px;
+  color: #555;
+  padding: 2%;
+  font-size: 1.8rem;
+  font-family: 'Krona One', sans-serif;
+  font-weight: 400;
+}
+
+.cabecalho__create_money {
+  background-color: var(--cor-2);
+  text-align: center;
+  border-radius: 5px;
+  color: #555;
+  padding: 2%;
+  font-size: 1.8rem;
+  font-family: 'Krona One', sans-serif;
+  font-weight: 400;
+}
+
+.cabecalho__create_water {
+  background-color: var(--cor-2);
+  text-align: center;
+  border-radius: 5px;
+  color: #555;
+  padding: 2%;
+  font-size: 1.8rem;
+  font-family: 'Krona One', sans-serif;
+  font-weight: 400;
+}
+
+.cabecalho__create_insert {
+  border-radius: 3px;
+  color: #191716;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.create__img {
+  width: 11.8%;
+  cursor:pointer;
+}
+
+.title_name_display {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 50%;
+}
+
+.title_name_display__create {
+  border: none;
+  background-color: var(--cor-2);
+  text-align: center;
+  border-radius: 5px;
+  color: var(--cor-6);
+  margin: 3% 0% 2.5% 0%;
+  font-size: 2.4rem;
+  font-family: 'Krona One', sans-serif;
+  font-weight: 400;
+  resize: none;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.title_name_display__create::placeholder {
+  color: var(--cor-5);
+}
+
+.cabecalho__create__prioridades {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1%;
+}
+
+.cabecalho__create__prioridades__text_area {
+  border: none;
+  color: #555;
+  border-radius: 5px;
+  background-color: var(--cor-pb);
+  width: 100%;
+  border-bottom: 1px solid #888;
+  padding: 2% 2% 2% 2%;
+  margin: 0.5%;
+  resize: none;
+  overflow: hidden;
+  font-size: 1rem;
+  font-family: 'Krona One', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.cabecalho__create__prioridades__text_area::placeholder {
+  color: #555;
+}
+
+.cabecalho__create__prioridades__text_area:hover {
+  background-color: #bec5cf;
+}
+
+.create__notes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: var(--display);
+  margin-bottom: 2%;
+}
+
+.create__notes__cabecalho {
+  color: #555;
+  padding: 2% 0% 1% 0%;
+  font-size: 1.8rem;
+  font-family: 'Krona One', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.create__money {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--display);
+}
+
+.create__money__elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1% 1% 5% 1%;
+}
+
+.create__money__elements__text_area {
+  color: #555;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--cor-pb);
+  font-size: 1rem;
+  font-family: 'Krona One', sans-serif;
+  border: none;
+  padding: 2% 2% 2% 2%;
+  margin: 0.5%;
+  resize: none;
+  overflow: hidden;
+  border-bottom: 1px solid #888;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.create__money__elements__text_area::placeholder {
+  color: #191716;
+}
+
+.create__money__elements__text_area:hover {
+  background-color: #bec5cf;
+}
+
+.cabecalho__create__boxsizing {
+  color: #191716;
+  background-color: var(--cor-cb);
+  font-size: 1rem;
+  font-family: 'Krona One', sans-serif;
+  border: none;
+  border-radius: 10px;
+  padding: 2%;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  
+}
+
+.cabecalho__create__boxsizing::placeholder {
+  color: #888;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+  }
+
+  /* Style the list items */
+  ul li {
+    width: 100%;
+    color: #888;
+    border-bottom: 1px solid #888;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+    position: relative;
+    padding: 9px 8px 4px 40px;
+    background: var(--cor-2);
+    font-size: 1.125rem;
+    transition: 0.6s;
+    border-radius: 6px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* lighter background-color on hover list */
+  ul li:hover {
+    background: #ffffff;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #8693ab;
+    color: var(--cor-2);
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: var(--cor-5);
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 7px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+
+  /*placeholder color */
+  ::placeholder {
+    color: #191716;
+  }
+
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 9px 16px 3px 16px;
+    border-radius: 1px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+    transition: 0.2s;
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  input {
+    color: #191716;
+    background: var(--cor-pb);
+    margin: 0;
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 1rem;
+  }
+  
+  /* Style the "Add" button */
+  .addBtn {
+    border-radius: 3px;
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .addBtn:hover {
+    color: var(--cor-1);
+    background-color: var(--cor-5);
+  }
+
+
+/* Typewritter animation */
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--cor-5); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 1.8s steps(22, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--cor-5); }
+}
+
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        background-color: #1d1d1d;
+        padding: 0.0% 0% 0% 0%;
+    
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+        gap: 10%;
+        padding: 0% 3% 0% 3%;
+    }
+
+    .cabecalho__menu__link {
+        font-size: 1rem;
+    }
+
+    .destaque-titulo__mobile {
+      font-size: 2rem;
+    }
+
+    .apresentacao {
+      flex-direction: column-reverse;
+      padding: 5%;
+      max-width: 100%;
+    }
+    
+    .apresentacao__img {
+      width: 70%;
+    }
+
+    .apresentacao__conteudo {
+      width: 100%;
+      padding-bottom: 2%;
+    }
+
+    .apresentacao__conteudo__titulo {
+      width: 100%;
+    }
+
+    .apresentacao__links__navegacao {
+      width: 70%;
+      font-size: 1.2rem;
+    }
+
+    .apresentacao__links__sobre__navegacao {
+        width: 100%;
+    }
+
+    .apresentacao__links__navegacao__icone {
+        width: 15%;
+    }
+
+    .apresentacao__conteudo__links {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .apresentacao__links__sobre {
+      width: 70%;
+    }
+
+    .rodape {
+        margin-top: 20%;
+        font-size: 0.8rem;
+    }
+
+    /* .destaque-titulo {
+      max-width: 100%;
+    } */
+
+    /* media for Create Page */
+
+    .top_div_create {
+      width: 95%;
+      height: 13vh;
+    }
+
+    .top_img_create {
+      background: none;
+      /* background-color: #d9d9d9; */
+      border-radius: 8px;
+      /* border: #888 solid 0.8px; */
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+    }
+
+    .inputs_dweek {
+      width: 100%;
+      gap: 4.5%;
+      align-items: flex-end;
+      padding-bottom: 0.8vh;
+    }
+
+    .lb_weeks {
+      color: #555;
+      font-size: 0.7rem;
+      padding-bottom: 0;
+      /* padding-top: 4.5vh; */
+    }
+
+    .checkmark {
+      border: #555 solid 0.7px;
+      height: 17px;
+      width: 17px;
+      background-color: var(--cor-2);
+      border-radius: 50%;
+    }
+
+    .show_date {
+      color: #303030;
+      background-color: transparent;
+      position: relative;
+      width: 63%;
+      left: 19%;
+      height: 4vh;
+      bottom: 11.5vh;
+      font-size: 1rem;
+    }
+
+    ul li.checked::before {
+      top: 15px;
+    }
+
+    .title_name_display {
+      width: 100%;
+    }
+
+    .title_name_display__create {
+      margin: 6% 0%;
+      font-size: 1.1rem;
+    }
+
+    .display_elements {
+      padding: 3% 0%;
+    }
+
+    .cabecalho__create {
+      padding-top: 1%;
+      font-size: 0.8rem;
+    }
+
+    .cabecalho__create_money {
+      font-size: 0.8rem;
+      padding-bottom: 5%;
+    }
+
+    .cabecalho__create_water {
+      font-size: 0.8rem;
+      padding-top: 10%;
+    }
+
+    .cabecalho__create__boxsizing {
+      margin: 2% 0.8%;
+      border-radius: 4px;
+    }
+
+    .cabecalho__create_insert {
+      font-size: 0.5rem;
+    }
+
+    .cabecalho__create__prioridades__text_area {
+      font-size: 0.5rem;
+      border-radius: 3px;
+    }
+
+    .create {
+      flex-direction: column;
+      align-items: center;
+      width: 96%;
+    }
+
+    .create__button {
+      width: 70%;
+      font-size: 0.9rem;
+      border-radius: 3px;
+      
+    }
+
+    .create__button__page {
+      margin-top: 7%;
+      width: 60%;
+      font-size: 0.6rem;
+      border-radius: 3px;
+    }
+
+    .create__money {
+      width: 98%;
+    }
+
+    .create__tasks {
+      width: 98%;
+    }
+
+    .create__notes {
+      padding: 1%;
+      width: 98%;
+    }
+
+    .create__notes__cabecalho {
+      font-size: 0.8rem;
+      padding-top: 8%;
+    }
+
+    .create__money__elements__text_area {
+      font-size: 0.5rem;
+      border-radius: 3px;
+    }
+
+    .create__water {
+      justify-content: center;
+      width: 98%;
+    }
+
+    .create__water__glasses {
+      margin-bottom: 10%;
+      padding: 3%;
+      border-radius: 3px;
+    }
+
+    .cabecalho__create__boxsizing {
+      font-size: 0.5rem;
+    }
+
+
+    #boxWrap {
+      border-radius: 3px;
+      width: 80%;
+      font-size: 1rem;
+    }
+
+    #boxBack {
+      border-radius: 3px;
+      padding-top: 85%;
+    }
+
+    ul li {
+      font-size: 0.6rem;
+      padding: 9px 23px 9px 23px;
+      border-radius: 3px;
+    }
+
+    ul li.checked::before {
+    top: 6px;
+    left: 9.6px;
+    height: 9px;
+    width: 4.2px;
+    }
+
+    input {
+      font-size: 0.5rem;
+    }
+
+    .addBtn {
+      font-size: 0.5rem;
+    }
+}
+
+@keyframes slideInX {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInY {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

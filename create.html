@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create | RinT</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="create__bd">
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a href="index.html"><img class="cabecalho__menu__logo" src="./assets/rint-logo.png" alt="logo do RinT"></a>
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="create.html">Create</a>
+            <a class="cabecalho__menu__link" href="about-us.html">About</a>
+        </nav>
+    </header>
+    <main class="display_elements">
+
+        <div class="top_div_create">
+            <div class="top_img_create">
+                <div class="inputs_dweek" data-aos="fade-zoom-in" data-aos-offset="0" data-aos-duration="700" data-aos-delay="100">
+                    <label class="lb_weeks">
+                        <input type="radio" name="radio">Mon 
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lb_weeks">
+                        <input type="radio" name="radio">Tue 
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lb_weeks">
+                        <input type="radio" name="radio">Wed 
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lb_weeks">
+                        <input type="radio" name="radio">Thu 
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lb_weeks">
+                        <input type="radio" name="radio">Fri 
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lb_weeks">
+                        <input type="radio" name="radio">Sat 
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lb_weeks">
+                        <input type="radio" name="radio">Sun 
+                        <span class="checkmark"></span>
+                    </label>
+                      
+                    
+                  </div>
+            </div>
+            <input class="show_date" type="date" name="showDate" data-aos="fade-zoom-in" data-aos-offset="0" data-aos-duration="700">
+        </div>
+        
+
+        <div class="title_name_display" data-aos="fade-zoom-in" data-aos-offset="0" data-aos-duration="700" data-aos-delay="150">
+            <textarea class="title_name_display__create" rows="1" placeholder="Insert your name here..."></textarea>
+            
+        </div>
+        
+        <article class="create">
+            <section class="create__tasks" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="700" data-aos-delay="200">
+            
+                <div id="myDIV" class="header">
+                    <h2 class="cabecalho__create">Tasks</h2>
+                    <input class="cabecalho__create_insert" type="text" id="myInput" placeholder="Insert task...">
+                    <span onclick="newElement()" class="addBtn">Add</span>
+                </div>
+                
+                <ul id="myUL">
+                    <li>Ex: Hit the gym</li>
+                    <li>Ex: Pay bills</li>
+                    <li class="checked">Ex: Check RinT JS code</li>
+                    <li>Ex: Go to the supermarket</li>
+                    <li>Ex: Text Lara</li>
+                    <li class="checked">Ex: Study Java</li>
+                    <li>Ex: Call University</li>
+                    <li>Ex: Check bank account</li>
+                    <li class="checked">Ex: Organize kitchen</li>
+                </ul>
+            </section>
+
+            <section class="create__water" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="700" data-aos-delay="300">
+                <h2 class="cabecalho__create_water">Water target</h2>
+                <div class="create__water__glasses">
+                    <img class="create__img" src="/assets/glasses/glass-empty.png" id="getImage" onclick="imagefun()" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200" data-aos-offset="-50">
+                    <img class="create__img" src="/assets/glasses/glass-empty.png" id="getImage1" onclick="imagefun1()" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="400" data-aos-offset="-50">
+                    <img class="create__img" src="/assets/glasses/glass-empty.png" id="getImage2" onclick="imagefun2()" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="600" data-aos-offset="-50">
+                    <img class="create__img" src="/assets/glasses/glass-empty.png" id="getImage3" onclick="imagefun3()" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="800" data-aos-offset="-50">
+                    <img class="create__img" src="/assets/glasses/glass-empty.png" id="getImage4" onclick="imagefun4()" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="1000" data-aos-offset="-50">
+                    <img class="create__img" src="/assets/glasses/glass-empty.png" id="getImage5" onclick="imagefun5()" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="1200" data-aos-offset="-50">
+                    <img class="create__img" src="/assets/glasses/glass-empty.png" id="getImage6" onclick="imagefun6()" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="1400" data-aos-offset="-50">
+                </div>
+
+                <h2 class="cabecalho__create">Daily priorities</h2>
+                <div class="cabecalho__create__prioridades" data-aos="fade-zoom-in" data-aos-offset="0" data-aos-duration="600" data-aos-delay="300">
+                    <textarea class="cabecalho__create__prioridades__text_area" rows="1" placeholder="1. "></textarea>
+                    <textarea class="cabecalho__create__prioridades__text_area" rows="1" placeholder="2. "></textarea>
+                    <textarea class="cabecalho__create__prioridades__text_area" rows="1" placeholder="3. "></textarea>
+                    <textarea class="cabecalho__create__prioridades__text_area" rows="1" placeholder="4. "></textarea>
+                    <textarea class="cabecalho__create__prioridades__text_area" rows="1" placeholder="5. "></textarea>
+                </div>
+
+                    <script src="changeImage.js"></script>
+            </section>
+        </article>
+
+        <div class="create__notes" data-aos="zoom-in" data-aos-offset="0" data-aos-duration="600" data-aos-delay="300">
+                <h2 class="create__notes__cabecalho">Notes</h2>
+                <textarea class="cabecalho__create__boxsizing" rows="10" wrap="hard" placeholder="Insert your notes here..."></textarea>
+            
+        </div>
+
+        <div class="create__money" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="600">
+            <div class="create__money__elements">
+                <h2 class="cabecalho__create_money">Payments</h2>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128184"></textarea>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128184"></textarea>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128184"></textarea>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128184"></textarea>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128184"></textarea>
+            </div>
+            <div class="create__money__elements" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="600">
+                <h2 class="cabecalho__create_money">Receivings</h2>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128176"></textarea>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128176"></textarea>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128176"></textarea>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128176"></textarea>
+                <textarea class="create__money__elements__text_area" rows="1" placeholder="&#128176"></textarea>
+            </div>
+        </div> 
+
+        <div id="boxBack"><div id="boxWrap">
+            <div id="boxTxt"></div>
+            <input class="create__button" type="button" value="I can't wait!" onclick="dbox()">
+          </div></div>
+          <input class="create__button__page" type="button" value="Sign up and save my tasks!" onclick="dbox('The database required to let you register/login is still being developed. <br><br> Soon, it will be working.')" data-aos="fade-zoom-in" data-aos-offset="50" data-aos-duration="600">
+    </main>
+
+    <footer class="rodape">
+        <p>Developed and designed by: Raphael Barreiro</p>
+    </footer>
+
+    <script src="main.js"> </script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+      
+
+</body>
+</html>
