@@ -1,6 +1,6 @@
 # RinT
 
-RinT is a ongoing development tool designed and developed by Raphael Barreiro, an IT student
+RinT is an ongoing development tool designed and developed by Raphael Barreiro, an IT student
 looking for his first job as a developer.
 
 You can try out all the input fields! For now, I still haven't integrated a 
